@@ -35,30 +35,30 @@ print("Last item of each split")
 print(train_split[-1], val_split[-1], test_split[-1])
 
 for i in train_split:
-    source_file_img = os.path.join("landcover.ai.v1/output", f"{i}.jpg")
-    source_file_label = os.path.join("landcover.ai.v1/output", f"{i}_m.png")
-    destination_file_img = os.path.join(train_data_dir, f"{i}.jpg")
-    destination_file_label = os.path.join(train_label_dir, f"{i}_m.png")
+    source_file_img = os.path.join("landcover.ai.v1/output", f"{i}.tif")
+    source_file_label = os.path.join("landcover.ai.v1/output", f"{i}_m.tif")
+    destination_file_img = os.path.join(train_data_dir, f"{i}.tif")
+    destination_file_label = os.path.join(train_label_dir, f"{i}.tif")
     if os.path.isfile(source_file_img) and not os.path.exists(destination_file_img):
         shutil.copy2(source_file_img, destination_file_img)
     if os.path.isfile(source_file_label) and not os.path.exists(destination_file_label):
         shutil.copy2(source_file_label, destination_file_label)
 
 for i in val_split:
-    source_file_img = os.path.join("landcover.ai.v1/output", f"{i}.jpg")
-    source_file_label = os.path.join("landcover.ai.v1/output", f"{i}_m.png")
-    destination_file_img = os.path.join(val_data_dir, f"{i}.jpg")
-    destination_file_label = os.path.join(val_label_dir, f"{i}_m.png")
+    source_file_img = os.path.join("landcover.ai.v1/output", f"{i}.tif")
+    source_file_label = os.path.join("landcover.ai.v1/output", f"{i}_m.tif")
+    destination_file_img = os.path.join(val_data_dir, f"{i}.tif")
+    destination_file_label = os.path.join(val_label_dir, f"{i}.tif")
     if os.path.isfile(source_file_img) and not os.path.exists(destination_file_img):
         shutil.copy2(source_file_img, destination_file_img)
     if os.path.isfile(source_file_label) and not os.path.exists(destination_file_label):
         shutil.copy2(source_file_label, destination_file_label)
 
 for i in test_split:
-    source_file_img = os.path.join("landcover.ai.v1/output", f"{i}.jpg")
-    source_file_label = os.path.join("landcover.ai.v1/output", f"{i}_m.png")
-    destination_file_img = os.path.join(test_data_dir, f"{i}.jpg")
-    destination_file_label = os.path.join(test_label_dir, f"{i}_m.png")
+    source_file_img = os.path.join("landcover.ai.v1/output", f"{i}.tif")
+    source_file_label = os.path.join("landcover.ai.v1/output", f"{i}_m.tif")
+    destination_file_img = os.path.join(test_data_dir, f"{i}.tif")
+    destination_file_label = os.path.join(test_label_dir, f"{i}.tif")
     if os.path.isfile(source_file_img) and not os.path.exists(destination_file_img):
         shutil.copy2(source_file_img, destination_file_img)
     if os.path.isfile(source_file_label) and not os.path.exists(destination_file_label):

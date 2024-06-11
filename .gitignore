@@ -163,3 +163,4 @@ cython_debug/
 landcover.ai.v1
 landcover.ai.v1.zip
 semantic_segmentation_mamba
+figures
