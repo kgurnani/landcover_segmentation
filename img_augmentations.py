@@ -28,8 +28,8 @@ for s in train_split:
     brightness = A.RandomBrightnessContrast(p=1)
     ### apply hflip
     transformed = hflip(image=image, mask=mask)
-    transformed_image = transformed['image']
-    transformed_mask = transformed['mask']
+    transformed_image = transformed["image"]
+    transformed_mask = transformed["mask"]
 
     pil_transformed_image = Image.fromarray(transformed_image)
     pil_transformed_mask = Image.fromarray(transformed_mask)
@@ -38,8 +38,8 @@ for s in train_split:
     pil_transformed_mask.save(f"./landcover.ai.v1/augmented/label/{s}_hflip.tif")
     ###apply vflip
     transformed = vflip(image=image, mask=mask)
-    transformed_image = transformed['image']
-    transformed_mask = transformed['mask']
+    transformed_image = transformed["image"]
+    transformed_mask = transformed["mask"]
 
     pil_transformed_image = Image.fromarray(transformed_image)
     pil_transformed_mask = Image.fromarray(transformed_mask)
@@ -48,8 +48,8 @@ for s in train_split:
     pil_transformed_mask.save(f"./landcover.ai.v1/augmented/label/{s}_vflip.tif")
     ### apply hue
     transformed = hue(image=image, mask=mask)
-    transformed_image = transformed['image']
-    transformed_mask = transformed['mask']
+    transformed_image = transformed["image"]
+    transformed_mask = transformed["mask"]
 
     pil_transformed_image = Image.fromarray(transformed_image)
     pil_transformed_mask = Image.fromarray(transformed_mask)
@@ -58,8 +58,8 @@ for s in train_split:
     pil_transformed_mask.save(f"./landcover.ai.v1/augmented/label/{s}_hue.tif")
     ### apply gray
     transformed = gray(image=image, mask=mask)
-    transformed_image = transformed['image']
-    transformed_mask = transformed['mask']
+    transformed_image = transformed["image"]
+    transformed_mask = transformed["mask"]
 
     pil_transformed_image = Image.fromarray(transformed_image)
     pil_transformed_mask = Image.fromarray(transformed_mask)
@@ -68,8 +68,8 @@ for s in train_split:
     pil_transformed_mask.save(f"./landcover.ai.v1/augmented/label/{s}_gray.tif")
     ### apply brightness
     transformed = brightness(image=image, mask=mask)
-    transformed_image = transformed['image']
-    transformed_mask = transformed['mask']
+    transformed_image = transformed["image"]
+    transformed_mask = transformed["mask"]
 
     pil_transformed_image = Image.fromarray(transformed_image)
     pil_transformed_mask = Image.fromarray(transformed_mask)

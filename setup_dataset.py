@@ -10,7 +10,14 @@ val_label_dir = "landcover.ai.v1/val/label"
 test_data_dir = "landcover.ai.v1/test/image"
 test_label_dir = "landcover.ai.v1/test/label"
 
-paths = [train_data_dir, train_label_dir, val_data_dir, val_label_dir, test_data_dir, test_label_dir]
+paths = [
+    train_data_dir,
+    train_label_dir,
+    val_data_dir,
+    val_label_dir,
+    test_data_dir,
+    test_label_dir,
+]
 
 for p in paths:
     if not os.path.exists(p):
