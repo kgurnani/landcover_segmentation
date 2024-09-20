@@ -1,63 +1,9 @@
-# Mamba-based Semantic Segmentation on Remote Sensing Imagery
+# A HYBRID TRANSFORMER-MAMBA APPROACH FOR LANDCOVER AERIAL IMAGERY SEGMENTATION
 
 ## Abstract
 
-TODO
+Aerial imagery segmentation is crucial for various applications, but traditional methods face challenges in processing efficiency and accuracy. This study proposes a novel hybrid Transformer-Mamba approach for semantic segmentation of landcover aerial imagery, aiming to improve performance and computational efficiency. We evaluated three model configurations using the Landcover dataset: a Transformer-only baseline and two hybrid Transformer-Mamba models. Performance was assessed using standard metrics and throughput. The hybrid model with the highest Mamba-to-Transformer ratio showed slight improvements across all metrics compared to the baseline. It achieved the highest IoU (0.57) and throughput (9.91 images/second), a 10.5% speed increase over the baseline. The hybrid approach shows promise for enhancing aerial imagery segmentation, offering modest improvements in accuracy and efficiency. Further research is needed to address class imbalance and optimize the architecture.
 
 ## Reproduce results
 
-### Environment setup
-
-- Install anaconda from [here](https://www.anaconda.com/download).
-- Setup environment with:
-```
-conda create --no-default-packages -n mrp python=3.10
-conda activate mrp
-pip install requirements.txt
-```
-
-### Project setup
-```
-Invoke-WebRequest https://landcover.ai.linuxpolska.com/download/landcover.ai.v1.zip -OutFile landcover.ai.v1.zip
-Expand-Archive landcover.ai.v1.zip
-python dataset_split.py
-python setup_dataset.py
-python img_augmentations.py
-```
-
-### Checkout jupyter notebooks
-
-TODO
-
-## Citations
-
-```
-@InProceedings{Boguszewski_2021_CVPR,
-    author = {Boguszewski, Adrian and Batorski, Dominik and Ziemba-Jankowska, Natalia and Dziedzic, Tomasz and Zambrzycka, Anna},
-    title = {LandCover.ai: Dataset for Automatic Mapping of Buildings, Woodlands, Water and Roads from Aerial Imagery},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-    month = {June},
-    year = {2021},
-    pages = {1102-1110}
-}
-```
-
-```
-@misc{zhao2024rsmamba,
-      title={RS-Mamba for Large Remote Sensing Image Dense Prediction}, 
-      author={Sijie Zhao and Hao Chen and Xueliang Zhang and Pengfeng Xiao and Lei Bai and Wanli Ouyang},
-      year={2024},
-      eprint={2404.02668},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
-
-```
-@article{huang2024localmamba,
-  title={LocalMamba: Visual State Space Model with Windowed Selective Scan},
-  author={Huang, Tao and Pei, Xiaohuan and You, Shan and Wang, Fei and Qian, Chen and Xu, Chang},
-  journal={arXiv preprint arXiv:2403.09338},
-  year={2024}
-}
-```
+Run each of the model variants (12t-0m, 2t-5m, 1t-1m) in Google Colab.
